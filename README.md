@@ -1,159 +1,161 @@
+چ
+# WebScout – Intelligent Web File Discovery & Download Engine
 
-<!-- Cyberpunk glow effect – GitHub may strip some CSS, but it adds flair locally -->
-<div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=2000&pause=500&color=0FF&center=true&vCenter=true&width=600&lines=%F0%9F%94%A5+WEBSCOUT+%F0%9F%94%A5;Cyberdeck+for+the+Digital+Frontier;Discover.+Select.+Download." alt="WebScout" />
-</div>
+WebScout is a powerful Python tool that helps you **discover**, **select**, and **download** files from any website. It combines fast fuzzing (path brute-forcing) with traditional crawling, then offers an interactive menu to cherry-pick what you want to download – all with multithreading and resume support.
 
-```
-┬ ┬┌─┐┌┐ ┌─┐┌─┐┌─┐┬ ┬┌┬┐
-│││├┤ ├┴┐└─┐│ │ ││ │ │
-└┴┘└─┘└─┘└─┘└─┘└─┘└─┘ ┴
-```
-<p align="center">
-  <code>Discover. Select. Download.</code>
-</p>
+![Python](https://img.shields.io/badge/Python-3.7%2B-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 ---
 
-# 🔍 **WEBSCOUT v2.0**  
-### *Neon-Enhanced Web File Hunter*
+## Features
 
-[![Python](https://img.shields.io/badge/Python-3.7%2B-cyan?style=flat-square&logo=python)](https://python.org)
-
-**WebScout** is your all-in-one **cyber-deck tool** for sniffing out files on any website.  
-It fuzzes paths like a brute-force daemon, crawls pages like a spider‑bot, and gives you a **neural interface** to pick exactly what you want – all at the speed of light over multithreaded connections.
-
----
-
-## ⚡ **Cyber Modules**
-
--  **Stealth Fuzzing** – Inject a custom wordlist into the target’s hidden corners.  
--  **Deep Crawling** – Recursively map the domain for linked resources.  
--  **Interactive Terminal UI** – Hand‑pick files by type, pattern, directory or manual range.  
--  **Resume & Skip** – Already grabbed files? We skip ’em. Interrupted? Resume right where you left off.  
--  **Extension Filters** – Hunt only `.pdf`, `.zip`, `.env`, `.sql` or whatever payload you need.  
--  **Memory Bank** – Discoveries are saved as JSON; reload them anytime to skip rescanning.  
--  **Hacker Aesthetic** – Colored output, progress bars, and cyberpunk vibes.
+- 🔍 **Smart Discovery** – Combine fuzzing with a built‑in wordlist and recursive crawling to find hidden files and directories.
+- 📋 **Interactive Selection** – Hand‑pick files by type, regex, directory, or manual numbering. Preview your selection before downloading.
+- ⚡ **Multithreaded** – Scan and download with configurable thread count for maximum speed.
+- ⏸️ **Resume Support** – Downloads can be paused and resumed. Already downloaded files are skipped.
+- 🎯 **Extension Filtering** – Only look for (or download) files with specific extensions (e.g. `.pdf`, `.jpg`, `.zip`).
+- 🧠 **Custom Wordlists** – Use your own wordlist for fuzzing in addition to the default 100+ common paths.
+- 💾 **Metadata Saving** – Discoveries are saved as JSON, so you can re‑use results without rescanning.
+- 🌈 **Colorful Output** – Console output with colored status icons and progress bars.
 
 ---
 
-## 📡 **Installation – Jack In**
+## Installation
+
+### Requirements
+
+- Python 3.7 or higher
+- pip
+
+### Install dependencies
 
 ```bash
-# Clone the repository
-git clone https://github.com/smh0x01/webscout.git
-cd webscout
-
-# Install dependencies
 pip install requests beautifulsoup4 colorama
 ```
 
-*Or use the `requirements.txt` (create one with those three packages).*
-
----
-
-## ⌨️ **Usage – Execute**
+*Alternatively, install from `requirements.txt`:*
 
 ```bash
-python webscout.py <TARGET_URL> [OPTIONS]
+pip install -r requirements.txt
 ```
 
-### Command‑Line Augments
+*(Create a `requirements.txt` with the three packages above.)*
 
-| Flag | Description |
-|------|-------------|
-| `-w`, `--wordlist` | Custom wordlist file for fuzzing |
-| `-e`, `--extensions` | Comma‑separated extensions (e.g. `.env,.sql,.zip`) |
-| `-l`, `--depth` | Maximum crawl depth (default: 5) |
-| `-t`, `--threads` | Number of parallel threads (default: 10) |
-| `-d`, `--delay` | Delay between requests (default: 0.3s) |
-| `-o`, `--output` | Where to drop downloaded files (default: `downloads`) |
-| `--crawl-only` | Skip fuzzing – only follow links |
-| `--fuzz-only` | Skip crawling – only blast paths |
-| `--load-discovery` | Load previous scan from cache |
-| `--no-interactive` | Download everything discovered (skip selection menu) |
-
----
-
-## 🚀 **Quick Runs**
+### Clone the repository
 
 ```bash
-# Basic cyber‑scan with interactive selection
-python webscout.py https://target.io
-
-# Fuzz with a custom wordlist, grab only sensitive configs & backups
-python webscout.py https://target.io -w ./wordlists/deep.txt -e .env,.conf,.bak,.sql
-
-# Crawl only, download all found automatically
-python webscout.py https://target.io --crawl-only --no-interactive
-
-# Resume a previous session directly to selection
-python webscout.py https://target.io --load-discovery
-
-# Maximum speed – 20 threads, 0.1s delay
-python webscout.py https://target.io -t 20 -d 0.1
+git clone https://github.com/smh0x01/webscout.git
+cd webscout
 ```
 
 ---
 
-## 🧠 **How the Neural Engine Works**
+## Usage
 
-### **Phase 1 – Signal Scanning (Discovery)**
-- **Fuzz Burst**: A swarm of HEAD/GET probes on common paths, admin panels, backup files, and more.  
-- **Web Crawler**: Recursively parses HTML to extract every hidden asset (images, scripts, docs).  
-- Results are stored in the `downloads/.metadata/discovery.json` “databank”.
+```bash
+python webscout.py <URL> [options]
+```
 
-### **Phase 2 – Neural Selection (Interactive Menu)**
-- Hand‑pick your loot using an intuitive menu:  
-  - By file extension (e.g., `.pdf`, `.zip`)  
-  - By regex pattern (e.g., `backup.*`, `config`)  
-  - By directory (`/uploads/`, `/admin/`)  
-  - By individual index numbers  
-- Preview your haul, clear, and reselect until it’s perfect.
+### Options
 
-### **Phase 3 – Extraction (Download)**
-- Parallel download threads with resume support.  
-- Already acquired files are skipped.  
-- Final summary with execution time, success/failure counts.
-
----
-
-## 💾 **Output**
-
-All downloaded files land in your specified output directory (default: `downloads/`).  
-The `.metadata` subfolder holds:
-
-- `discovery.json` – full scan results  
-- `download_history.json` – after‑action report
-
-Use `--load-discovery` next time to skip right to the selection phase.
+| Flag / Argument        | Description                                                                 |
+|------------------------|-----------------------------------------------------------------------------|
+| `url`                  | Target URL to scan and download from (required)                             |
+| `-w`, `--wordlist`     | Custom wordlist file for fuzzing                                            |
+| `-e`, `--extensions`   | File extensions to focus on (comma-separated, e.g. `.pdf,.jpg`)             |
+| `-l`, `--depth`        | Maximum crawl depth (default: 5)                                            |
+| `-t`, `--threads`      | Number of threads for checking/downloading (default: 10)                    |
+| `-d`, `--delay`        | Delay between requests in seconds (default: 0.3)                            |
+| `-o`, `--output`       | Output directory (default: `downloads`)                                     |
+| `--crawl-only`         | Skip fuzzing, only crawl links                                              |
+| `--fuzz-only`          | Skip crawling, only fuzz paths                                              |
+| `--load-discovery`     | Load a previous discovery file instead of scanning again                    |
+| `--no-interactive`     | Download all discovered files automatically (skip the selection menu)       |
 
 ---
 
-## 🤝 **Contribute to the Grid**
+## Examples
 
-Pull requests, issue reports, and new wordlists are all welcome.  
-Let’s make the digital frontier a little more transparent.
+1. **Basic scan and interactive download**  
+   ```bash
+   python webscout.py https://example.com
+   ```
+
+2. **Use a custom wordlist and only look for PDF/JPEG files**  
+   ```bash
+   python webscout.py https://example.com -w my_words.txt -e .pdf,.jpg
+   ```
+
+3. **Crawl only (no fuzzing), then download everything automatically**  
+   ```bash
+   python webscout.py https://example.com --crawl-only --no-interactive
+   ```
+
+4. **Load a previous discovery and enter interactive selection**  
+   ```bash
+   python webscout.py https://example.com --load-discovery
+   ```
+
+5. **Aggressive scanning with 20 threads and minimal delay**  
+   ```bash
+   python webscout.py https://example.com -t 20 -d 0.1
+   ```
 
 ---
 
-## ⚠️ **Disclaimer**
+## How It Works
 
-This tool is intended for **authorized security testing** and **educational purposes only**.  
-Always obtain permission before scanning any network or website.  
-**You are responsible for your own actions.**
+WebScout operates in **three phases**:
+
+### 1. Discovery (Fuzzing + Crawling)
+- **Fuzzing**: Sends HEAD/GET requests to a list of common paths (e.g. `admin/`, `robots.txt`, `backup.zip`).  
+- **Crawling**: Parses HTML pages within the same domain to extract links to other resources (images, scripts, documents, etc.).  
+- All discovered files and directories are stored in memory and saved to `downloads/.metadata/discovery.json`.
+
+### 2. Interactive Selection
+- A menu lets you **precisely choose** what to download.  
+- Select by file extension, regex pattern, specific index numbers, or entire directories.  
+- You can review your selection, clear it, and re‑select as many times as you like.
+
+### 3. Download
+- Selected files are downloaded in parallel using multiple threads.  
+- The tool checks for previously downloaded files and resumes partial downloads if possible.  
+- A final summary shows time, success/failure counts, and the output location.
 
 ---
 
-<div align="center">
+## Output
 
-`Ｃｙｂｅｒ★ｐｕｎｋ ２.０`
+All downloaded files are placed in the directory specified with `-o` (default: `downloads/`).  
+Metadata (discovery and download history) is stored in `downloads/.metadata/`.
 
-</div>
+After a successful scan you can:
+- Re‑run with `--load-discovery` to skip scanning and go straight to selection/download.
+- Inspect `discovery.json` to see all found paths and their sizes.
 
 ---
 
-## 👤 **Operator**
+## Contributing
+
+Pull requests and issues are welcome!  
+Feel free to suggest new features, improve wordlists, or fix bugs.
+
+---
+
+## License
+
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+
+---
+
+## Author
 
 **smh0x01**  
-[GitHub](https://github.com/smh0x01) · [Repository](https://github.com/smh0x01/webscout)
+GitHub: [https://github.com/smh0x01](https://github.com/smh0x01)  
+Tool repo: [https://github.com/smh0x01/webscout](https://github.com/smh0x01/webscout)
+
+---
+
+> *“Discover. Select. Download.”* 🚀
+```
