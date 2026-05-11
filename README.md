@@ -159,6 +159,3 @@ Always obtain permission before scanning any network or website.
 
 **smh0x01**  
 [GitHub](https://github.com/smh0x01) · [Repository](https://github.com/smh0x01/webscout)
-
-> *“In the neon grid, data is power. Grab yours.”*
-```
