@@ -1,14 +1,24 @@
-چ
-# WebScout – Intelligent Web File Discovery & Download Engine
 
-WebScout is a powerful Python tool that helps you **discover**, **select**, and **download** files from any website. It combines fast fuzzing (path brute-forcing) with traditional crawling, then offers an interactive menu to cherry-pick what you want to download – all with multithreading and resume support.
+# 🔍 WEBSCOUT
 
-![Python](https://img.shields.io/badge/Python-3.7%2B-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
+```
+┬ ┬┌─┐┌┐ ┌─┐┌─┐┌─┐┬ ┬┌┬┐
+│││├┤ ├┴┐└─┐│ │ ││ │ │
+└┴┘└─┘└─┘└─┘└─┘└─┘└─┘ ┴
+
+Discover. Select. Download.
+```
 
 ---
 
-## Features
+**WebScout** is a powerful Python tool that helps you **discover**, **select**, and **download** files from any website. It combines fast fuzzing (path brute-forcing) with traditional crawling, then offers an interactive menu to cherry-pick what you want to download – all with multithreading and resume support.
+
+![Python](https://img.shields.io/badge/Python-3.7%2B-blue?style=flat-square&logo=python)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+
+---
+
+## ✨ Features
 
 - 🔍 **Smart Discovery** – Combine fuzzing with a built‑in wordlist and recursive crawling to find hidden files and directories.
 - 📋 **Interactive Selection** – Hand‑pick files by type, regex, directory, or manual numbering. Preview your selection before downloading.
@@ -21,14 +31,14 @@ WebScout is a powerful Python tool that helps you **discover**, **select**, and 
 
 ---
 
-## Installation
+## 📦 Installation
 
 ### Requirements
 
 - Python 3.7 or higher
 - pip
 
-### Install dependencies
+### Install Dependencies
 
 ```bash
 pip install requests beautifulsoup4 colorama
@@ -40,9 +50,7 @@ pip install requests beautifulsoup4 colorama
 pip install -r requirements.txt
 ```
 
-*(Create a `requirements.txt` with the three packages above.)*
-
-### Clone the repository
+### Clone the Repository
 
 ```bash
 git clone https://github.com/smh0x01/webscout.git
@@ -51,7 +59,7 @@ cd webscout
 
 ---
 
-## Usage
+## 🚀 Usage
 
 ```bash
 python webscout.py <URL> [options]
@@ -75,7 +83,7 @@ python webscout.py <URL> [options]
 
 ---
 
-## Examples
+## 💡 Examples
 
 1. **Basic scan and interactive download**  
    ```bash
@@ -104,7 +112,7 @@ python webscout.py <URL> [options]
 
 ---
 
-## How It Works
+## ⚙️ How It Works
 
 WebScout operates in **three phases**:
 
@@ -125,7 +133,7 @@ WebScout operates in **three phases**:
 
 ---
 
-## Output
+## 📁 Output
 
 All downloaded files are placed in the directory specified with `-o` (default: `downloads/`).  
 Metadata (discovery and download history) is stored in `downloads/.metadata/`.
@@ -136,20 +144,20 @@ After a successful scan you can:
 
 ---
 
-## Contributing
+## 🤝 Contributing
 
 Pull requests and issues are welcome!  
 Feel free to suggest new features, improve wordlists, or fix bugs.
 
 ---
 
-## License
+## 📜 License
 
 This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## Author
+## 👤 Author
 
 **smh0x01**  
 GitHub: [https://github.com/smh0x01](https://github.com/smh0x01)  
@@ -157,5 +165,5 @@ Tool repo: [https://github.com/smh0x01/webscout](https://github.com/smh0x01/webs
 
 ---
 
-> *“Discover. Select. Download.”* 🚀
+> *"Discover. Select. Download."* 🚀
 ```
