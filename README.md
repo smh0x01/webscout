@@ -20,14 +20,14 @@ Discover. Select. Download.
 
 ## ✨ Features
 
-- 🔍 **Smart Discovery** – Combine fuzzing with a built‑in wordlist and recursive crawling to find hidden files and directories.
-- 📋 **Interactive Selection** – Hand‑pick files by type, regex, directory, or manual numbering. Preview your selection before downloading.
-- ⚡ **Multithreaded** – Scan and download with configurable thread count for maximum speed.
-- ⏸️ **Resume Support** – Downloads can be paused and resumed. Already downloaded files are skipped.
-- 🎯 **Extension Filtering** – Only look for (or download) files with specific extensions (e.g. `.pdf`, `.jpg`, `.zip`).
-- 🧠 **Custom Wordlists** – Use your own wordlist for fuzzing in addition to the default 100+ common paths.
-- 💾 **Metadata Saving** – Discoveries are saved as JSON, so you can re‑use results without rescanning.
-- 🌈 **Colorful Output** – Console output with colored status icons and progress bars.
+-  **Smart Discovery** – Combine fuzzing with a built‑in wordlist and recursive crawling to find hidden files and directories.
+-  **Interactive Selection** – Hand‑pick files by type, regex, directory, or manual numbering. Preview your selection before downloading.
+-  **Multithreaded** – Scan and download with configurable thread count for maximum speed.
+-  **Resume Support** – Downloads can be paused and resumed. Already downloaded files are skipped.
+-  **Extension Filtering** – Only look for (or download) files with specific extensions (e.g. `.pdf`, `.jpg`, `.zip`).
+-  **Custom Wordlists** – Use your own wordlist for fuzzing in addition to the default 100+ common paths.
+-  **Metadata Saving** – Discoveries are saved as JSON, so you can re‑use results without rescanning.
+-  **Colorful Output** – Console output with colored status icons and progress bars.
 
 ---
 
@@ -153,7 +153,7 @@ Always obtain permission before scanning any network or website.
 
 <div align="center">
 
-> *"Discover. Select. Download."* 🚀
+> *"Discover. Select. Download."*
 
 </div>
 
