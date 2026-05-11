@@ -1,3 +1,9 @@
+<!-- Cyberpunk glow effect – GitHub may strip some CSS, but it adds flair locally -->
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=2000&pause=500&color=0FF&center=true&vCenter=true&width=600&lines=%F0%9F%94%A5+WEBSCOUT+%F0%9F%94%A5;Discover.+Select.+Download.;Cyber+File+Hunter" alt="WebScout" />
+</div>
+
+
 ```markdown
 ┬ ┬┌─┐┌┐ ┌─┐┌─┐┌─┐┬ ┬┌┬┐
 │││├┤ ├┴┐└─┐│ │ ││ │ │
