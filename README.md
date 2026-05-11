@@ -8,7 +8,6 @@ Discover. Select. Download.
 
 ---
 
-# 🔍 WEBSCOUT
 
 [![Python](https://img.shields.io/badge/Python-3.7%2B-00ffff?style=for-the-badge&logo=python&logoColor=ff00ff)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-ff00ff?style=for-the-badge)](LICENSE)
