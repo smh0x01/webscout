@@ -12,10 +12,6 @@
 Discover. Select. Download.
 ```
 
----
-
-# 🔍 WEBSCOUT
-
 [![Python](https://img.shields.io/badge/Python-3.7%2B-00ffff?style=for-the-badge&logo=python&logoColor=ff00ff)](https://python.org)
 [![Status](https://img.shields.io/badge/Status-Active-00ffff?style=for-the-badge)]()
 
