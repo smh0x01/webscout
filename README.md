@@ -1,7 +1,4 @@
 
-# 🔍 WEBSCOUT
-
-```
 ┬ ┬┌─┐┌┐ ┌─┐┌─┐┌─┐┬ ┬┌┬┐
 │││├┤ ├┴┐└─┐│ │ ││ │ │
 └┴┘└─┘└─┘└─┘└─┘└─┘└─┘ ┴
@@ -11,10 +8,13 @@ Discover. Select. Download.
 
 ---
 
-**WebScout** is a powerful Python tool that helps you **discover**, **select**, and **download** files from any website. It combines fast fuzzing (path brute-forcing) with traditional crawling, then offers an interactive menu to cherry-pick what you want to download – all with multithreading and resume support.
+# 🔍 WEBSCOUT
 
-![Python](https://img.shields.io/badge/Python-3.7%2B-blue?style=flat-square&logo=python)
-![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+[![Python](https://img.shields.io/badge/Python-3.7%2B-00ffff?style=for-the-badge&logo=python&logoColor=ff00ff)](https://python.org)
+[![License](https://img.shields.io/badge/License-MIT-ff00ff?style=for-the-badge)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Active-00ffff?style=for-the-badge)]()
+
+**WebScout** is a powerful Python tool that helps you **discover**, **select**, and **download** files from any website. It combines fast fuzzing (path brute-forcing) with traditional crawling, then offers an interactive menu to cherry-pick what you want to download – all with multithreading and resume support.
 
 ---
 
@@ -85,30 +85,22 @@ python webscout.py <URL> [options]
 
 ## 💡 Examples
 
-1. **Basic scan and interactive download**  
-   ```bash
-   python webscout.py https://example.com
-   ```
+```bash
+# Basic scan with interactive selection
+python webscout.py https://example.com
 
-2. **Use a custom wordlist and only look for PDF/JPEG files**  
-   ```bash
-   python webscout.py https://example.com -w my_words.txt -e .pdf,.jpg
-   ```
+# Use a custom wordlist and only look for PDF/JPEG files
+python webscout.py https://example.com -w my_words.txt -e .pdf,.jpg
 
-3. **Crawl only (no fuzzing), then download everything automatically**  
-   ```bash
-   python webscout.py https://example.com --crawl-only --no-interactive
-   ```
+# Crawl only (no fuzzing), then download everything automatically
+python webscout.py https://example.com --crawl-only --no-interactive
 
-4. **Load a previous discovery and enter interactive selection**  
-   ```bash
-   python webscout.py https://example.com --load-discovery
-   ```
+# Load a previous discovery and enter interactive selection
+python webscout.py https://example.com --load-discovery
 
-5. **Aggressive scanning with 20 threads and minimal delay**  
-   ```bash
-   python webscout.py https://example.com -t 20 -d 0.1
-   ```
+# Aggressive scanning with 20 threads and minimal delay
+python webscout.py https://example.com -t 20 -d 0.1
+```
 
 ---
 
@@ -116,17 +108,17 @@ python webscout.py <URL> [options]
 
 WebScout operates in **three phases**:
 
-### 1. Discovery (Fuzzing + Crawling)
+### Phase 1 – Discovery (Fuzzing + Crawling)
 - **Fuzzing**: Sends HEAD/GET requests to a list of common paths (e.g. `admin/`, `robots.txt`, `backup.zip`).  
 - **Crawling**: Parses HTML pages within the same domain to extract links to other resources (images, scripts, documents, etc.).  
 - All discovered files and directories are stored in memory and saved to `downloads/.metadata/discovery.json`.
 
-### 2. Interactive Selection
+### Phase 2 – Interactive Selection
 - A menu lets you **precisely choose** what to download.  
 - Select by file extension, regex pattern, specific index numbers, or entire directories.  
 - You can review your selection, clear it, and re‑select as many times as you like.
 
-### 3. Download
+### Phase 3 – Download
 - Selected files are downloaded in parallel using multiple threads.  
 - The tool checks for previously downloaded files and resumes partial downloads if possible.  
 - A final summary shows time, success/failure counts, and the output location.
@@ -144,26 +136,24 @@ After a successful scan you can:
 
 ---
 
-## 🤝 Contributing
+## ⚠️ Disclaimer
 
-Pull requests and issues are welcome!  
-Feel free to suggest new features, improve wordlists, or fix bugs.
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+This tool is intended for **authorized security testing** and **educational purposes only**.  
+Always obtain permission before scanning any network or website.  
+**You are responsible for your own actions.**
 
 ---
 
 ## 👤 Author
 
 **smh0x01**  
-GitHub: [https://github.com/smh0x01](https://github.com/smh0x01)  
-Tool repo: [https://github.com/smh0x01/webscout](https://github.com/smh0x01/webscout)
+[GitHub](https://github.com/smh0x01) · [Repository](https://github.com/smh0x01/webscout)
 
 ---
 
+<div align="center">
+
 > *"Discover. Select. Download."* 🚀
+
+</div>
 ```
