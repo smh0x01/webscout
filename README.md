@@ -1,4 +1,13 @@
 ```markdown
+#
+<div align="center">
+┬ ┬┌─┐┌┐ ┌─┐┌─┐┌─┐┬ ┬┌┬┐
+│││├┤ ├┴┐└─┐│ │ ││ │ │
+└┴┘└─┘└─┘└─┘└─┘└─┘└─┘ ┴
+
+Discover. Select. Download.
+# 🔍 WebScout
+
 # WebScout – Intelligent Web File Discovery & Download Engine
 
 WebScout is a powerful Python tool that helps you **discover**, **select**, and **download** files from any website. It combines fast fuzzing (path brute-forcing) with traditional crawling, then offers an interactive menu to cherry-pick what you want to download – all with multithreading and resume support.
@@ -156,6 +165,3 @@ GitHub: [https://github.com/smh0x01](https://github.com/smh0x01)
 Tool repo: [https://github.com/smh0x01/webscout](https://github.com/smh0x01/webscout)
 
 ---
-
-> *“Discover. Select. Download.”* 🚀
-```
