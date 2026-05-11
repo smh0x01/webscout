@@ -19,8 +19,6 @@
 ### *Neon-Enhanced Web File Hunter*
 
 [![Python](https://img.shields.io/badge/Python-3.7%2B-cyan?style=flat-square&logo=python)](https://python.org)
-[![License](https://img.shields.io/badge/License-MIT-neon?style=flat-square)](LICENSE)
-[![Status](https://img.shields.io/badge/Build-Cyberpunk%20Ready-ff00ff?style=flat-square)]()
 
 **WebScout** is your all-in-one **cyber-deck tool** for sniffing out files on any website.  
 It fuzzes paths like a brute-force daemon, crawls pages like a spider‑bot, and gives you a **neural interface** to pick exactly what you want – all at the speed of light over multithreaded connections.
@@ -29,13 +27,13 @@ It fuzzes paths like a brute-force daemon, crawls pages like a spider‑bot, and
 
 ## ⚡ **Cyber Modules**
 
-- 🕵️ **Stealth Fuzzing** – Inject a custom wordlist into the target’s hidden corners.  
-- 🧬 **Deep Crawling** – Recursively map the domain for linked resources.  
-- 💻 **Interactive Terminal UI** – Hand‑pick files by type, pattern, directory or manual range.  
-- ⛓️ **Resume & Skip** – Already grabbed files? We skip ’em. Interrupted? Resume right where you left off.  
-- 🧪 **Extension Filters** – Hunt only `.pdf`, `.zip`, `.env`, `.sql` or whatever payload you need.  
-- 🧠 **Memory Bank** – Discoveries are saved as JSON; reload them anytime to skip rescanning.  
-- 🎨 **Hacker Aesthetic** – Colored output, progress bars, and cyberpunk vibes.
+-  **Stealth Fuzzing** – Inject a custom wordlist into the target’s hidden corners.  
+-  **Deep Crawling** – Recursively map the domain for linked resources.  
+-  **Interactive Terminal UI** – Hand‑pick files by type, pattern, directory or manual range.  
+-  **Resume & Skip** – Already grabbed files? We skip ’em. Interrupted? Resume right where you left off.  
+-  **Extension Filters** – Hunt only `.pdf`, `.zip`, `.env`, `.sql` or whatever payload you need.  
+-  **Memory Bank** – Discoveries are saved as JSON; reload them anytime to skip rescanning.  
+-  **Hacker Aesthetic** – Colored output, progress bars, and cyberpunk vibes.
 
 ---
 
