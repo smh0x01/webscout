@@ -8,9 +8,9 @@ Discover. Select. Download.
 
 ---
 
+# 🔍 WEBSCOUT
 
 [![Python](https://img.shields.io/badge/Python-3.7%2B-00ffff?style=for-the-badge&logo=python&logoColor=ff00ff)](https://python.org)
-[![License](https://img.shields.io/badge/License-MIT-ff00ff?style=for-the-badge)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Active-00ffff?style=for-the-badge)]()
 
 **WebScout** is a powerful Python tool that helps you **discover**, **select**, and **download** files from any website. It combines fast fuzzing (path brute-forcing) with traditional crawling, then offers an interactive menu to cherry-pick what you want to download – all with multithreading and resume support.
@@ -152,6 +152,7 @@ Always obtain permission before scanning any network or website.
 
 <div align="center">
 
-> *"Discover. Select. Download."* 
+> *"Discover. Select. Download."*
 
 </div>
+```
